@@ -1,6 +1,10 @@
 ---
-- include: debian.yml
+
+- name: test access
+  ansible.builtin.ping:
+
+- include_tasks: debian.yml
   when: ansible_os_family == "Debian"
 
-- include: mac.yml
+- include_tasks: mac.yml
   when: ansible_os_family == "MacOSX"

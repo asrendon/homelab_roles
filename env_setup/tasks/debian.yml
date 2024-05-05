@@ -1,0 +1,14 @@
+- name: Update all packages to their latest version
+  apt:
+    name: "*"
+    state: latest
+
+- name: install htop
+  apt:
+    name: htop
+    state: present
+
+- name: install htop
+  apt:
+    name: vim
+    state: present
